@@ -1,24 +1,93 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="lib/bower_components/angular-material/angular-material.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>cluttr</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body ng-app="YourApp">
+<body>
+<div class="section no-pad-bot">
+    <div class="container">
+        <br><br>
+        <h1 class="header center avenir big-text"><a href="/" class="white-text">cluttr.</a></h1>
+        <div class="row center">
+            <h5 id="tagline" class="header col s12 light white-text avenir">
+                connect with the best community on the interwebs
+            </h5>
+        </div>
+        <br/>
+        <div id="action-container" class="row center">
+            <a id='signup' class="btn-large btn-flat waves-effect waves-light white-text avenir">Sign Up</a>
+            <a id='login' class="btn-large btn-flat waves-effect waves-light white-text avenir">Login</a>
+        </div>
+        <div id="login-container" hidden>
+            <div class="row">
+                <form class="col s6 offset-s3 avenir">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate">
+                            <label for="username">username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <a id="login-submit" class="btn-flat waves-effect waves-light white-text avenir">login</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="signup-container" hidden>
+            <div class="row">
+                <form class="col s6 offset-s3 avenir">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username-signup" type="text" class="validate">
+                            <label for="username">username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password-signup" type="password" class="validate">
+                            <label for="password">password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password2-signup" type="password" class="validate">
+                            <label for="password">re-enter password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <a id="signup-submit" class="btn-flat waves-effect waves-light white-text avenir">sign up</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-test
+<footer class="page-footer transparent">
+    <div class="container">
+        <p class="right avenir grey-text">© 2016 CLUTTR ALL RIGHTS RESERVED</p>
+    </div>
+</footer>
 
-<script src="lib/bower_components/angular/angular.js"></script>
-<script src="lib/bower_components/angular-aria/angular-aria.js"></script>
-<script src="lib/bower_components/angular-animate/angular-animate.js"></script>
-<script src="lib/bower_components/angular-material/angular-material.js"></script>
-<script>
-
-    // Include app dependency on ngMaterial
-
-    angular.module( 'YourApp', [ 'ngMaterial' ] );
-
-</script>
-
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="lib/js/materialize.js"></script>
+<script src="js/init.js"></script>
 </body>
-</html>
