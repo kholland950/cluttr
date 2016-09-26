@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>cluttr</title>
-
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="lib/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
+<head th:include="fragments/head (css='landing')"></head>
 <body>
 <div class="section no-pad-bot">
     <div class="container">
         <br><br>
-        <h1 class="header center avenir big-text"><a href="/" class="white-text">cluttr.</a></h1>
+        <h1 class="header center avenir big-text">
+            <a href="/" class="white-text" th:text="#{app.period}"></a>
+        </h1>
         <div class="row center">
-            <h5 id="tagline" class="header col s12 light white-text avenir">
-                connect with the best community on the interwebs
-            </h5>
+            <h5 id="tagline"
+                class="header col s12 light white-text avenir"
+                th:text="#{landing.tagline.default}"
+                th:attr="data-login-text=#{landing.tagline.login}"></h5>
         </div>
         <br/>
         <div id="action-container" class="row center">
-            <a id='signup' class="btn-large btn-flat waves-effect waves-light white-text avenir">Sign Up</a>
-            <a id='login' class="btn-large btn-flat waves-effect waves-light white-text avenir">Login</a>
+            <a id='signup' class="btn-large white waves-effect waves-dark black-text avenir"
+                th:text="#{auth.signup}"></a>
+            <a id='login' class="btn-large btn-flat waves-effect waves-light white-text avenir"
+                th:text="#{auth.login}"></a>
         </div>
         <div id="login-container" hidden>
             <div class="row">
-                <form class="col s6 offset-s3 avenir">
+                <form class="col s6 offset-s3 avenir-thick">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="username" type="text" class="validate">
-                            <label for="username">username</label>
+                            <input id="username" type="text" class="validate white-text">
+                            <label for="username" class="white-text"
+                                th:text="#{auth.login.username}"></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate">
-                            <label for="password">password</label>
+                            <input id="password" type="password" class="validate white-text">
+                            <label for="password" class="white-text"
+                                th:text="#{auth.login.password}"></label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="center">
-                            <a id="login-submit" class="btn-flat waves-effect waves-light white-text avenir">login</a>
+                            <button id="login-submit"
+                                class="btn-flat waves-effect waves-light white-text avenir"
+                                type="submit"
+                                th:text="#{auth.login}"></button>
                         </div>
                     </div>
                 </form>
@@ -50,28 +51,36 @@
         </div>
         <div id="signup-container" hidden>
             <div class="row">
-                <form class="col s6 offset-s3 avenir">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="username-signup" type="text" class="validate">
-                            <label for="username">username</label>
+                <form class="col s6 offset-s3 avenir-thick">
+                    <div class="card-panel">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="username-signup" type="text" class="validate black-text">
+                                <label for="username" class="black-text"
+                                    th:text="#{auth.login.username}"></label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password-signup" type="password" class="validate">
-                            <label for="password">password</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password-signup" type="password" class="validate black-text">
+                                <label for="password" class="black-text"
+                                    th:text="#{auth.login.password}"></label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password2-signup" type="password" class="validate">
-                            <label for="password">re-enter password</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password2-signup" type="password" class="validate black-text">
+                                <label for="password" class="black-text"
+                                       th:text="#{auth.signup.reenter_password}"></label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="center">
-                            <a id="signup-submit" class="btn-flat waves-effect waves-light white-text avenir">sign up</a>
+                        <div class="row no-bottom-margin">
+                            <div class="center">
+                                <button id="signup-submit"
+                                        class="btn-flat waves-effect waves-light avenir"
+                                        type="submit"
+                                        th:text="#{auth.signup}"></button>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -80,14 +89,8 @@
     </div>
 </div>
 
-<footer class="page-footer transparent">
-    <div class="container">
-        <p class="right avenir grey-text">© 2016 CLUTTR ALL RIGHTS RESERVED</p>
-    </div>
-</footer>
+<div th:include="fragments/footer"></div>
 
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="lib/js/materialize.js"></script>
-<script src="js/init.js"></script>
+<script src="js/landing.js"></script>
 </body>
+</html>

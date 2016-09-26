@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<div class="hide-on-med-and-down">
+    <div class="row">
+        <div class="col s3 offset-s9">
+            <div class="card transparent">
+                <div class="right">
+                    <a href="/home">
+                        <i class="material-icons white-text tooltipped"
+                           data-position="bottom"
+                           data-delay="0"
+                           data-tooltip="Feed">
+                            view_headline
+                        </i>
+                    </a>
+                    <a href="/me">
+                        <i class="material-icons white-text tooltipped"
+                           data-position="bottom"
+                           data-delay="0"
+                           data-tooltip="Profile">
+                            person
+                        </i>
+                    </a>
+                    <a id="notifications-icon" class='dropdown-button' href='#' data-activates='notifications-dropdown'>
+                        <i class="material-icons tooltipped orange-text"
+                           data-position="bottom"
+                           data-delay="0"
+                           data-tooltip="Notifications">
+                            notifications
+                        </i>
+                        <span id="notif-num" class="notification-number orange-text">2</span>
+                    </a>
+                    <a href="/messages">
+                        <i class="material-icons white-text tooltipped"
+                           data-position="bottom"
+                           data-delay="0"
+                           data-tooltip="Messages">
+                            message
+                        </i>
+                    </a>
+
+                    <a href="/settings">
+                        <i class="material-icons white-text tooltipped"
+                           data-position="bottom"
+                           data-delay="0"
+                           data-tooltip="Settings">
+                            settings
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dropdown Structure -->
+<div id='notifications-dropdown' class='dropdown-content card'>
+    <div class="avenir-thick">
+        <h5 id="notification-header" title="Notifications">Notifications</h5>
+        <ul id="notification-list" class="collection">
+            <li class="collection-item  notification new">
+                <div>
+                    <a href="#">bskcx</a> commented on your post
+                    <i class="material-icons right tiny delete-notification">close</i>
+                </div>
+            </li>
+            <li class="collection-item notification new">
+                <div>
+                    <a href="#">sarahino</a> liked your post
+                    <i class="material-icons right tiny delete-notification">close</i>
+                </div>
+            </li>
+            <li class="collection-item notification">
+                <div>
+                    <a href="#">eyocum</a> sent you a friend request
+                    <i class="material-icons right tiny delete-notification">close</i>
+                </div>
+            </li>
+        </ul>
+        <p id="no-notifications" hidden>
+            You have no notifications.
+        </p>
+    </div>
+</div>

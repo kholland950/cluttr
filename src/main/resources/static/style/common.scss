@@ -1,0 +1,40 @@
+@import "fonts";
+@import "header";
+@import "footer";
+@import "post";
+
+.no-padding {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.notification-number {
+  position: fixed;
+  margin-top: 1.5em;
+  margin-left: -1.3em;
+}
+
+#notifications-dropdown {
+  width: auto !important;
+  min-width: 20em;
+  max-width: 35em;
+
+  h5 {
+    margin-left: .5em !important;
+  }
+
+  .new {
+    background-color: #efefff;
+  }
+
+  li {
+    padding: .5em;
+    min-height: 1.1em;
+  }
+
+  p {
+    margin-left: .5em !important;
+  }
+}

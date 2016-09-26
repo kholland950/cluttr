@@ -6,11 +6,6 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-    color: #444;
-}
-
 p {
     line-height: 2rem;
 }
@@ -23,21 +18,15 @@ html, body {
 body {
     background-color: #020101;
     background-image: url("/images/frontblur.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
 }
 
-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-input, label {
-    color: white !important;
-}
 input {
     font-size: 1.5em !important;
 }
+
 label {
     font-size: 1em !important;
 }
@@ -46,32 +35,16 @@ label {
     font-size: 10em;
 }
 
-.avenir {
-    font-family: "avenir-next", sans-serif;
-}
-
-a {
+a, button {
     font-size: 1.5em;
-}
-
-@font-face {
-    font-family: "avenir-next";
-    src: url("/fonts/AvenirNextLTPro-UltLtCn.otf");
 }
 
 .button-collapse {
     color: #26a69a;
 }
 
-.parallax-container {
-    min-height: 380px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255, 255, 255, .9);
-}
-
-.parallax-container .section {
-    width: 100%;
+.row {
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -93,12 +66,8 @@ a {
 
 .icon-block {
     padding: 0 15px;
-}
 
-.icon-block .material-icons {
-    font-size: inherit;
-}
-
-footer.page-footer {
-    margin: 0;
+    .material-icons {
+        font-size: inherit;
+    }
 }

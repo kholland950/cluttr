@@ -6,7 +6,9 @@
 
         $('#login').click(function () {
             $('#action-container').hide();
-            $('#tagline').text("welcome home, we knew you'd come back");
+            var taglineElement = $('#tagline');
+            var loginText = taglineElement.attr('data-login-text');
+            taglineElement.text(loginText);
             $('#login-container').fadeIn();
         });
         $('#signup').click(function () {

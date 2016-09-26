@@ -8,4 +8,5 @@ class CluttrApp {
 	static void main(String[] args) {
 		SpringApplication.run CluttrApp, args
 	}
+
 }

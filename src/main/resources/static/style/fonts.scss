@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "avenir-next";
+  src: url("/fonts/AvenirNextLTPro-UltLtCn.otf");
+}
+@font-face {
+  font-family: "avenir-thick";
+  src: url("/fonts/AvenirNextLTPro-Regular.otf");
+}
+.avenir {
+  font-family: "avenir-next", sans-serif;
+}
+.avenir-thick {
+  font-family: "avenir-thick", sans-serif;
+}

@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-size: 100%;
+    background: #051120 url("/images/home-bg.png") fixed center bottom;
+}
+
+.me-container {
+    position: fixed;
+    width: 100%;
+}
+
+#new-post {
+    height: 2em;
+    min-height: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.post-content {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.post-actions {
+    padding-top: 1em !important;
+    padding-bottom: 0 !important;
+}
+
+.comments {
+    font-size: .85em;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.new-comment-container {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.comment-input {
+    margin-top: 0;
+}
+
+.new-comment {
+    margin-bottom: .2em !important;
+}

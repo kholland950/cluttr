@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml" lang="en">
+<!--/*@thymesVar id="css" type="java.lang.String"*/-->
+<head th:include="fragments/head (css=${css})">
+    <!--/*  Each token will be replaced by their respective titles in the resulting page. */-->
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Task List</title>
+</head>
+<body>
+<!--/* Standard layout can be mixed with Layout Dialect */-->
+<div th:replace="fragments/header :: header"></div>
+<div layout:fragment="content">
+    <!-- ============================================================================ -->
+    <!-- This content is only used for static prototyping purposes (natural templates)-->
+    <!-- and is therefore entirely optional, as this markup fragment will be included -->
+    <!-- from "fragments/header.html" at runtime.                                     -->
+    <!-- ============================================================================ -->
+    <h1>Static content for prototyping purposes only</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+        Phasellus et placerat elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+        Phasellus et placerat elit.
+    </p>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<div layout:fragment="modals"></div>
+<!--/*@thymesVar id="js" type="java.lang.String"*/-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/lib/js/materialize.js"></script>
+<script src="/js/common.js"></script>
+<script th:src="'/js/'+${js}+'.js'"></script>
+</body>
+</html>

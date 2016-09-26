@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.thymeleaf.org/" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout" th:with="css='messages',js='messages'">
+<body>
+<div th:replace="fragments/me-container"></div>
+
+<div layout:fragment="content">
+    <div class="row">
+        <div class="col s4">
+            <div class="card">
+                <div class="card-content conversation-card">
+                    <span class="card-title">Conversations</span>
+                    <a id="new-conversation" href="#" class="right">
+                        <i class="material-icons small">add</i>
+                    </a>
+                    <div class="messages-content-container">
+                        <ul class="collection conversation-list">
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">bskcx</span>
+                                <p>hey whats up</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">eyocum</span>
+                                <p>i <3 kevin</p>
+                                <span class="new badge orange">3</span>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation selected">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">sarahino</span>
+                                <p>quintonio!</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">obama</span>
+                                <p>i need you to save the country for me. call me asap</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">obama</span>
+                                <p>i need you to save the country for me. call me asap</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">obama</span>
+                                <p>i need you to save the country for me. call me asap</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">obama</span>
+                                <p>i need you to save the country for me. call me asap</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                            <li class="collection-item avatar conversation">
+                                <i class="material-icons circle">person</i>
+                                <span class="title">obama</span>
+                                <p>i need you to save the country for me. call me asap</p>
+                                <a href="#delete-conversation-modal" class="secondary-content modal-trigger">
+                                    <i class="material-icons grey-text">close</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s8">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Messages <span class="who">| sarahino</span></span>
+                    <ul class="collection messages">
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">blah blah blah blah blah</p>
+                            <p class="secondary-content">3 days ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">blah blah blah blah blah</p>
+                            <p class="secondary-content">3 days ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">blah blah blah blah blah</p>
+                            <p class="secondary-content">3 days ago</p>
+                        </li>
+                        <li class="message collection-item avatar ">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">blah blah blah blah blah</p>
+                            <p class="secondary-content">3 days ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">hey what are you doing</p>
+                            <p class="secondary-content">an hour ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">quintonio</span>
+                            <p class="message-content">nothing why</p>
+                            <p class="secondary-content">an hour ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">come over</p>
+                            <p class="secondary-content">an hour ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">quintonio</span>
+                            <p class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+                                Phasellus et placerat elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Praesent scelerisque neque neque, ac elementum quam dignissim interdum.</p>
+                            <p class="secondary-content">an hour ago</p>
+                        </li>
+                        <li class="message collection-item avatar">
+                            <i class="material-icons circle action">message</i>
+                            <span class="title">sarahino</span>
+                            <p class="message-content">quintonio!</p>
+                            <p class="secondary-content">just now</p>
+                        </li>
+                    </ul>
+                    <div class="compose-message">
+                        <div class="no-padding">
+                            <textarea id="compose" class="materialize-textarea" placeholder="send a message"></textarea>
+                            <a id="send-message" href="#" class="right"><i class="material-icons">send</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="delete-conversation-modal" class="modal" layout:fragment="modals">
+    <div class="modal-content">
+        <div class="flow-text">Are you sure you want to delete this conversation?</div>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect waves-light btn-flat">Cancel</a>
+        <a href="#" class="modal-action waves-effect waves-light red btn-flat white-text">Delete</a>
+    </div>
+</div>
+
+</body>
+</html>

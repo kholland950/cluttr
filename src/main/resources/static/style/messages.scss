@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #020101 url("/images/messages-bg.png");
+  background-size: cover;
+}
+
+#new-conversation {
+  margin-top: .5em;
+
+  color: #8f8f8f;
+
+  &:hover {
+    color: #0D47A1;
+  }
+}
+
+.conversation-list {
+    height: 36.5em;
+    overflow: scroll;
+}
+
+$selectedColor: #365899;
+.conversation {
+  &.selected {
+    background-color: $selectedColor;
+    color: white;
+
+    &:hover {
+      background-color: darken($selectedColor, 5);
+      color: white;
+    }
+
+    .secondary-content i {
+      color: white !important;
+    }
+  }
+
+  &:hover {
+    background-color: #efefef;
+    cursor: pointer;
+    color: black;
+
+    .secondary-content {
+      display: block;
+    }
+  }
+
+  .secondary-content {
+    display: none;
+  }
+}
+
+.who {
+  color: #8f8f8f
+}
+
+.messages {
+  height: 30em;
+  overflow: scroll;
+
+  .action {
+    transition: background-color .2s ease-in-out;
+
+    &.delete {
+      background-color: #ea4a4f !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.message-content {
+  width: 90%;
+}
+
+.compose-message {
+  height: auto;
+
+  border-style: solid;
+  border-color: #eee;
+
+  padding: .5em;
+
+  #compose {
+    border: none;
+    box-shadow: none;
+  }
+
+  textarea {
+    overflow: scroll;
+    width: 95%;
+    height: 4em;
+    min-height: 4em;
+    max-height: 4em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  i {
+    margin-top: .5em;
+  }
+
+  #send-message {
+    margin-left: .5em;
+    position: fixed;
+  }
+}

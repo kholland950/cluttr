@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.thymeleaf.org/" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout" th:with="css='home'">
+<body>
+<div th:replace="fragments/me-container"></div>
+
+<div class="container" layout:fragment="content">
+    <div class="row">
+        <div class="col s10 offset-s1">
+            <div th:replace="fragments/new-post"></div>
+            <div th:replace="fragments/post"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
